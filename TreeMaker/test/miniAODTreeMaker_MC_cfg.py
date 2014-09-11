@@ -27,7 +27,7 @@ removeMCMatching(process, ['All'], outputModules = [])
 readFiles = cms.untracked.vstring()
 secFiles = cms.untracked.vstring()
 readFiles.extend( [
-        'file:../MiniAOD/miniAOD-prod_PAT.root'
+        'file:miniAOD-prod_PAT.root'
         ] );
 
 process.source = cms.Source("PoolSource",
@@ -70,12 +70,12 @@ process.correctelectron = cms.Sequence(process.eleRegressionEnergy * process.cal
 
 process.load("CommonTools.ParticleFlow.PFBRECO_cff")
 from CommonTools.ParticleFlow.Isolation.pfElectronIsolation_cff import *
-##elPFIsoDepositCharged.src    = cms.InputTag("gsfElectrons")
-##elPFIsoDepositChargedAll.src = cms.InputTag("gsfElectrons")
-##elPFIsoDepositNeutral.src    = cms.InputTag("gsfElectrons")
-##elPFIsoDepositGamma.src      = cms.InputTag("gsfElectrons")
-##elPFIsoDepositPU.src         = cms.InputTag("gsfElectrons")
-##
+elPFIsoDepositCharged.src    = cms.InputTag("gsfElectrons")
+elPFIsoDepositChargedAll.src = cms.InputTag("gsfElectrons")
+elPFIsoDepositNeutral.src    = cms.InputTag("gsfElectrons")
+elPFIsoDepositGamma.src      = cms.InputTag("gsfElectrons")
+elPFIsoDepositPU.src         = cms.InputTag("gsfElectrons")
+
 process.load("CommonTools.ParticleFlow.PFBRECO_cff")
 from CommonTools.ParticleFlow.Isolation.pfMuonIsolation_cff import *
 ##muPFIsoDepositCharged.src    = cms.InputTag("muons")
@@ -296,7 +296,7 @@ process.p = cms.Path(
 process.MessageLogger.cerr.FwkReport.reportEvery = cms.untracked.int32(1)
 
 # process all the events
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(25) )
 
 #process.schedule=cms.Schedule(process.p)
 
