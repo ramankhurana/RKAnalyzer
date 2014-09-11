@@ -5,6 +5,7 @@
 # with command line options: miniAOD-prod -s PAT --eventcontent MINIAODSIM --runUnscheduled --mc --filein /store/relval/CMSSW_7_0_0/RelValTTbar_13/GEN-SIM-RECO/PU50ns_POSTLS170_V4-v2/00000/265B9219-FF98-E311-BF4A-02163E00EA95.root --conditions PLS170_V7AN1::All --no_exec
 import FWCore.ParameterSet.Config as cms
 
+
 process = cms.Process('PAT')
 
 # import of standard configurations
