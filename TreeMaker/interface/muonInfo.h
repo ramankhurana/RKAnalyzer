@@ -58,6 +58,7 @@ class muonInfo : public baseTree{
   std::vector<float>  Muon_Significance2D,  Muon_Value2D , Muon_Error2D;
   
   std::vector<float> Muon_chargedIso , Muon_photonIso , Muon_neutralIso , Muon_particleIso , Muon_dbeta ;
+  std::vector<float> Muon_DXY, Muon_DZ;
 };
 
 #endif

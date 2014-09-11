@@ -100,7 +100,7 @@ void pfjetInfo::SetBranches(){
   AddBranch(&PFJet_HFHAE   ,"PFJet_HFHAE");
   AddBranch(&PFJet_HFEME   ,"PFJet_HFEME");
   AddBranch(&PFJet_NCH     ,"PFJet_NCH");
-  AddBranch(&PFJet_NConstituents           ,"PFJet_NConstituents");
+  //AddBranch(&PFJet_NConstituents           ,"PFJet_NConstituents");
   AddBranch(&PFJet_TrackCountHiEffBJetTags ,"PFJet_TrackCountHiEffBJetTags");
   AddBranch(&PFJet_TrackCountHiPurBJetTags ,"PFJet_TrackCountHiPurBJetTags");
   AddBranch(&PFJet_SimpleSVHiEffBJetTags   ,"PFJet_SimpleSVHiEffBJetTags");
@@ -126,7 +126,7 @@ void pfjetInfo::Clear(){
   PFJet_HFHAE.clear();
   PFJet_HFEME.clear();
   PFJet_NCH.clear();
-  PFJet_NConstituents.clear();         
+  //PFJet_NConstituents.clear();         
   PFJet_TrackCountHiEffBJetTags.clear();
   PFJet_TrackCountHiPurBJetTags.clear();
   PFJet_SimpleSVHiEffBJetTags.clear();

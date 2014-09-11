@@ -194,6 +194,26 @@ void electronInfo::Fill(const edm::Event& iEvent, const edm::EventSetup& iSetup)
     Electron_Value2D.push_back(electron->dB(pat::Electron::PV2D));
     Electron_Error2D.push_back(electron->edB(pat::Electron::PV2D));
     
+    
+    // Added on 3rd September 2014
+    Electron_IsPF.push_back(electron->isPF());
+    Electron_SigmaIetaIphi.push_back(electron->sigmaIetaIphi());
+    Electron_IP3D.push_back(electron->ip3d());
+    Electron_full5x5_sigmaEtaEta.push_back(electron->full5x5_sigmaEtaEta());
+    Electron_full5x5_sigmaIetaIeta.push_back(electron->full5x5_sigmaIetaIeta());
+    Electron_full5x5_sigmaIphiIphi.push_back(electron->full5x5_sigmaIphiIphi());
+    Electron_full5x5_sigmaIetaIphi.push_back(electron->full5x5_sigmaIetaIphi());
+    Electron_full5x5_e1x5.push_back(electron->full5x5_e1x5());
+    Electron_full5x5_e2x5Max.push_back(electron->full5x5_e2x5Max());
+    Electron_full5x5_e5x5.push_back(electron->full5x5_e5x5());
+    Electron_full5x5_r9.push_back(electron->full5x5_r9());
+    Electron_full5x5_hcalDepth1OverEcal.push_back(electron->full5x5_hcalDepth1OverEcal());
+    Electron_full5x5_hcalDepth2OverEcal.push_back(electron->full5x5_hcalDepth2OverEcal());
+    Electron_full5x5_hcalOverEcal.push_back(electron->full5x5_hcalOverEcal());
+    Electron_full5x5_hcalDepth1OverEcalBc.push_back(electron->full5x5_hcalDepth1OverEcalBc());
+    Electron_full5x5_hcalDepth2OverEcalBc.push_back(electron->full5x5_hcalDepth2OverEcalBc());
+    Electron_full5x5_hcalOverEcalBc.push_back(electron->full5x5_hcalOverEcalBc());
+
     //std::cout<<"superCluster()->clustersSize() "<<electron->superCluster()->clustersSize()
     //	     <<"superCluster()->hitsAndFractions().size() "<<electron->superCluster()->hitsAndFractions().size()
     //	     <<"superCluster()->rawEnergy() "<<electron->superCluster()->rawEnergy()
@@ -298,6 +318,26 @@ void electronInfo::SetBranches(){
   AddBranch(&Electron_Error2D,"Electron_Error2D");
 
   
+  AddBranch(&Electron_IsPF,"Electron_IsPF");
+  AddBranch(&Electron_SigmaIetaIphi,"Electron_SigmaIetaIphi");
+  AddBranch(&Electron_IP3D,"Electron_IP3D");
+  AddBranch(&Electron_full5x5_sigmaEtaEta,"Electron_full5x5_sigmaEtaEta");
+  AddBranch(&Electron_full5x5_sigmaIetaIeta,"Electron_full5x5_sigmaIetaIeta");
+  AddBranch(&Electron_full5x5_sigmaIphiIphi,"Electron_full5x5_sigmaIphiIphi");
+  AddBranch(&Electron_full5x5_sigmaIetaIphi,"Electron_full5x5_sigmaIetaIphi");
+  AddBranch(&Electron_full5x5_e1x5,"Electron_full5x5_e1x5");
+  AddBranch(&Electron_full5x5_e2x5Max,"Electron_full5x5_e2x5Max");
+  AddBranch(&Electron_full5x5_e5x5,"Electron_full5x5_e5x5");
+  AddBranch(&Electron_full5x5_r9,"Electron_full5x5_r9");
+  AddBranch(&Electron_full5x5_hcalDepth1OverEcal,"Electron_full5x5_hcalDepth1OverEcal");
+  AddBranch(&Electron_full5x5_hcalDepth2OverEcal,"Electron_full5x5_hcalDepth2OverEcal");
+  AddBranch(&Electron_full5x5_hcalOverEcal,"Electron_full5x5_hcalOverEcal");
+  AddBranch(&Electron_full5x5_hcalDepth1OverEcalBc,"Electron_full5x5_hcalDepth1OverEcalBc");
+  AddBranch(&Electron_full5x5_hcalDepth2OverEcalBc,"Electron_full5x5_hcalDepth2OverEcalBc");
+  AddBranch(&Electron_full5x5_hcalOverEcalBc,"Electron_full5x5_hcalOverEcalBc");
+
+  
+  
   
   if(debug_)    std::cout<<"set branches"<<std::endl;
 }
@@ -337,7 +377,25 @@ void electronInfo::Clear(){
   Electron_Significance2D.clear();
   Electron_Value2D.clear();
   Electron_Error2D.clear();
-
-
+  
+  Electron_IsPF.clear();
+  Electron_SigmaIetaIphi.clear();
+  Electron_IP3D.clear();
+  Electron_full5x5_sigmaEtaEta.clear();
+  Electron_full5x5_sigmaIetaIeta.clear();
+  Electron_full5x5_sigmaIphiIphi.clear();
+  Electron_full5x5_sigmaIetaIphi.clear();
+  Electron_full5x5_e1x5.clear();
+  Electron_full5x5_e2x5Max.clear();
+  Electron_full5x5_e5x5.clear();
+  Electron_full5x5_r9.clear();
+  Electron_full5x5_hcalDepth1OverEcal.clear();
+  Electron_full5x5_hcalDepth2OverEcal.clear();
+  Electron_full5x5_hcalOverEcal.clear();
+  Electron_full5x5_hcalDepth1OverEcalBc.clear();
+  Electron_full5x5_hcalDepth2OverEcalBc.clear();
+  Electron_full5x5_hcalOverEcalBc.clear();
+  
+   
   if(debug_) std::cout<<"cleared"<<std::endl;
 }

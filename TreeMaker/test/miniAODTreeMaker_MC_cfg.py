@@ -27,7 +27,7 @@ removeMCMatching(process, ['All'], outputModules = [])
 readFiles = cms.untracked.vstring()
 secFiles = cms.untracked.vstring()
 readFiles.extend( [
-        'file:../MiniAOD/miniAOD-prod_PAT.root'
+        'file:miniAOD-prod_PAT.root'
         ] );
 
 process.source = cms.Source("PoolSource",
@@ -45,18 +45,18 @@ process.load('EgammaAnalysis.ElectronTools.electronRegressionEnergyProducer_cfi'
 process.load("EgammaAnalysis.ElectronTools.calibratedPatElectrons_cfi")
 
 # dataset to correct
-process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
-                                                   calibratedPatElectrons = cms.PSet(
-    initialSeed = cms.untracked.uint32(1),
-    engineName = cms.untracked.string('TRandom3')
-    )
-                                                   )
-
-process.calibratedPatElectrons.isAOD = cms.bool(False)
-process.calibratedPatElectrons.isMC = cms.bool(True)
-process.calibratedPatElectrons.inputDataset = cms.string("Summer12_DR53X_HCP2012")
-process.calibratedPatElectrons.updateEnergyError = cms.bool(True)
-process.calibratedPatElectrons.applyCorrections = cms.int32(0)
+###process.RandomNumberGeneratorService = cms.Service("RandomNumberGeneratorService",
+###                                                   calibratedPatElectrons = cms.PSet(
+###    initialSeed = cms.untracked.uint32(1),
+###    engineName = cms.untracked.string('TRandom3')
+###    )
+###                                                   )
+###
+###process.calibratedPatElectrons.isAOD = cms.bool(False)
+###process.calibratedPatElectrons.isMC = cms.bool(True)
+###process.calibratedPatElectrons.inputDataset = cms.string("Summer12_DR53X_HCP2012")
+###process.calibratedPatElectrons.updateEnergyError = cms.bool(True)
+###process.calibratedPatElectrons.applyCorrections = cms.int32(0)
 #process.calibratedPatElectrons.verbose = cms.bool(True)
 #process.calibratedPatElectrons.synchronization = cms.bool(True)
 

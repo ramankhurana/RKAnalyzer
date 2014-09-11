@@ -224,7 +224,7 @@ void hpstauInfo::SetBranches(){
 
   AddBranch(&disc_decayModeFinding ,"disc_decayModeFinding");
   AddBranch(&disc_decayModeFindingNewDMs ,"disc_decayModeFindingNewDMs");
-  AddBranch(&disc_decayModeFindingOldDMs ,"disc_decayModeFindingOldDMs");
+  //AddBranch(&disc_decayModeFindingOldDMs ,"disc_decayModeFindingOldDMs");
   
   AddBranch(&disc_chargedIsoPtSum ,"disc_chargedIsoPtSum");
   AddBranch(&disc_neutralIsoPtSum ,"disc_neutralIsoPtSum");
@@ -311,7 +311,7 @@ void hpstauInfo::Clear(){
   
   disc_decayModeFinding.clear();
   disc_decayModeFindingNewDMs.clear();
-  disc_decayModeFindingOldDMs.clear();
+  //disc_decayModeFindingOldDMs.clear();
   
   disc_chargedIsoPtSum.clear();
   disc_neutralIsoPtSum.clear();

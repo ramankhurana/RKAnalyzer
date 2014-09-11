@@ -71,7 +71,25 @@ class electronInfo : public baseTree{
   std::vector<float> Electron_Significance2D ;
   std::vector<float> Electron_Value2D ;
   std::vector<float> Electron_Error2D ;
-
+  
+  std::vector<float> Electron_IsPF;
+  std::vector<float> Electron_SigmaIetaIphi;
+  std::vector<float>  Electron_IP3D;
+  std::vector<float>  Electron_full5x5_sigmaEtaEta;
+  std::vector<float>  Electron_full5x5_sigmaIetaIeta;
+  std::vector<float>  Electron_full5x5_sigmaIphiIphi;
+  std::vector<float>  Electron_full5x5_sigmaIetaIphi;
+  std::vector<float>  Electron_full5x5_e1x5;
+  std::vector<float>  Electron_full5x5_e2x5Max;
+  std::vector<float>  Electron_full5x5_e5x5;
+  std::vector<float>  Electron_full5x5_r9;
+  std::vector<float>  Electron_full5x5_hcalDepth1OverEcal;
+  std::vector<float>  Electron_full5x5_hcalDepth2OverEcal;
+  std::vector<float>  Electron_full5x5_hcalOverEcal;
+  std::vector<float>  Electron_full5x5_hcalDepth1OverEcalBc;
+  std::vector<float>  Electron_full5x5_hcalDepth2OverEcalBc;
+  std::vector<float>  Electron_full5x5_hcalOverEcalBc;
+  
 };
 
 #endif
